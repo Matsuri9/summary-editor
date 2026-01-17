@@ -1,0 +1,44 @@
+{
+  "name": "summary-editor",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@milkdown/core": "^7.18.0",
+    "@milkdown/ctx": "^7.18.0",
+    "@milkdown/plugin-listener": "^7.18.0",
+    "@milkdown/preset-commonmark": "^7.18.0",
+    "@milkdown/preset-gfm": "^7.18.0",
+    "@milkdown/react": "^7.18.0",
+    "@milkdown/theme-nord": "^7.18.0",
+    "@milkdown/utils": "^7.18.0",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-dialog": "^2.6.0",
+    "@tauri-apps/plugin-fs": "^2.4.5",
+    "@tauri-apps/plugin-opener": "^2",
+    "@tauri-apps/plugin-updater": "^2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
+    "react-pdf": "^10.3.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "@tauri-apps/cli": "^2",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.4"
+  }
+}

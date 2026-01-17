@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+/* Typography for rendered Markdown */
+.markdown-body {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.markdown-body h1 {
+  @apply text-2xl font-bold text-gray-800 mt-6 mb-4 pb-2 border-b border-gray-200;
+}
+
+.markdown-body h2 {
+  @apply text-xl font-semibold text-gray-800 mt-5 mb-3 pb-1 border-b border-gray-100;
+}
+
+.markdown-body h3 {
+  @apply text-lg font-medium text-gray-800 mt-4 mb-2;
+}
+
+.markdown-body p {
+  @apply my-3;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  @apply my-3 ml-6;
+}
+
+.markdown-body ul {
+  @apply list-disc;
+}
+
+.markdown-body ol {
+  @apply list-decimal;
+}
+
+.markdown-body li {
+  @apply my-1;
+}
+
+.markdown-body code {
+  @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.markdown-body pre {
+  @apply bg-gray-50 border border-gray-200 rounded-lg p-4 my-4 overflow-x-auto;
+}
+
+.markdown-body pre code {
+  @apply bg-transparent p-0;
+}
+
+.markdown-body blockquote {
+  @apply border-l-4 border-gray-300 pl-4 my-4 text-gray-600 italic;
+}
+
+.markdown-body a {
+  @apply text-blue-600 hover:text-blue-800 underline;
+}
+
+.markdown-body table {
+  @apply w-full my-4 border-collapse;
+}
+
+.markdown-body th,
+.markdown-body td {
+  @apply border border-gray-200 px-3 py-2 text-left;
+}
+
+.markdown-body th {
+  @apply bg-gray-50 font-semibold;
+}
+
+.markdown-body hr {
+  @apply my-6 border-gray-200;
+}
+
+/* PDF viewer custom scrollbar */
+.pdf-viewer::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.pdf-viewer::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded;
+}
+
+.pdf-viewer::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded hover:bg-gray-400;
+}
+
+/* Note panel custom scrollbar */
+.note-panel::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.note-panel::-webkit-scrollbar-track {
+  @apply bg-gray-50 rounded;
+}
+
+.note-panel::-webkit-scrollbar-thumb {
+  @apply bg-gray-200 rounded hover:bg-gray-300;
+}
+
+/* Milkdown Editor Styles */
+.milkdown-editor {
+  @apply min-h-full;
+}
+
+.milkdown-editor .milkdown {
+  @apply outline-none;
+}
+
+.milkdown-editor .editor {
+  @apply outline-none;
+}
+
+.milkdown-editor [contenteditable="true"] {
+  @apply outline-none;
+}
+
+.milkdown-editor .ProseMirror {
+  @apply outline-none min-h-[300px];
+}
+
+.milkdown-editor .ProseMirror h1 {
+  @apply text-2xl font-bold text-gray-800 mt-6 mb-4 pb-2 border-b border-gray-200;
+}
+
+.milkdown-editor .ProseMirror h2 {
+  @apply text-xl font-semibold text-gray-800 mt-5 mb-3 pb-1 border-b border-gray-100;
+}
+
+.milkdown-editor .ProseMirror h3 {
+  @apply text-lg font-medium text-gray-800 mt-4 mb-2;
+}
+
+.milkdown-editor .ProseMirror h4 {
+  @apply text-base font-medium text-gray-700 mt-3 mb-2;
+}
+
+.milkdown-editor .ProseMirror p {
+  @apply my-2 text-gray-700 leading-relaxed;
+}
+
+.milkdown-editor .ProseMirror ul {
+  @apply my-3 ml-6 list-disc;
+}
+
+.milkdown-editor .ProseMirror ol {
+  @apply my-3 ml-6 list-decimal;
+}
+
+.milkdown-editor .ProseMirror li {
+  @apply my-1;
+}
+
+.milkdown-editor .ProseMirror li p {
+  @apply my-0;
+}
+
+.milkdown-editor .ProseMirror code {
+  @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.milkdown-editor .ProseMirror pre {
+  @apply bg-gray-50 border border-gray-200 rounded-lg p-4 my-4 overflow-x-auto;
+}
+
+.milkdown-editor .ProseMirror pre code {
+  @apply bg-transparent p-0;
+}
+
+.milkdown-editor .ProseMirror blockquote {
+  @apply border-l-4 border-gray-300 pl-4 my-4 text-gray-600 italic;
+}
+
+.milkdown-editor .ProseMirror a {
+  @apply text-blue-600 hover:text-blue-800 underline;
+}
+
+.milkdown-editor .ProseMirror hr {
+  @apply my-6 border-gray-200;
+}
+
+.milkdown-editor .ProseMirror table {
+  @apply w-full my-4 border-collapse;
+}
+
+.milkdown-editor .ProseMirror th,
+.milkdown-editor .ProseMirror td {
+  @apply border border-gray-200 px-3 py-2 text-left;
+}
+
+.milkdown-editor .ProseMirror th {
+  @apply bg-gray-50 font-semibold;
+}
+
+.milkdown-editor .ProseMirror .task-list-item {
+  @apply flex items-start gap-2;
+}
+
+.milkdown-editor .ProseMirror .task-list-item input[type="checkbox"] {
+  @apply mt-1;
+}
+
+/* Placeholder styling */
+.milkdown-editor .ProseMirror p.is-editor-empty:first-child::before {
+  @apply text-gray-400 pointer-events-none h-0;
+  content: attr(data-placeholder);
+  float: left;
+}
