@@ -6,16 +6,12 @@ fn greet(name: &str) -> String {
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
-    let builder = tauri::Builder::default()
+    tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_dialog::init())
-        .plugin(tauri_plugin_fs::init());
-
-    // Updater plugin is registered separately for conditional compilation
-    #[cfg(not(debug_assertions))]
-    let builder = builder.plugin(tauri_plugin_updater::Builder::new().build());
-
-    builder
+        .plugin(tauri_plugin_fs::init())
+        // TODO: Re-enable updater after setting up signing keys
+        // .plugin(tauri_plugin_updater::Builder::new().build())
         .invoke_handler(tauri::generate_handler![greet])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

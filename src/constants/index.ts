@@ -41,6 +41,13 @@ export const getNewNoteContent = (date: string) => `# 新しいノート
 // バージョン履歴
 export const VERSION_HISTORY: VersionInfo[] = [
     {
+        version: "v1.0.2",
+        date: "2026-01-17",
+        changes: [
+            "リリースビルドの修正",
+        ],
+    },
+    {
         version: "v1.0.0",
         date: "2026-01-17",
         changes: [
